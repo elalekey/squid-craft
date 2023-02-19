@@ -14,8 +14,31 @@
     @apply text-lg font-bold;
   }
 
+  .header {
+    @apply sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] shadow-md;
+  }
+
+  .footer {
+    @apply absolute w-full bottom-0 z-40;
+  }
+
   body {
-    background-color: #15202b;
+    background-color: #1e293b;
     @apply text-white;
+    position: relative;
+    height: 100vh;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      opacity: 0.015;
+      height: 100vh;
+      background-image: url('~/assets/squid-craft-pattern.svg');
+      z-index: -1;
+    }
+  }
+
+  html {
+    font-family: Proxima Nova, system-ui, sans-serif;
   }
 }

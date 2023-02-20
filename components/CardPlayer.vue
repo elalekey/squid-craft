@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="channel">
-      <a href="https://www.twitch.tv/byakknar">
+      <a href="https://www.twitch.tv/">
         <i class="squid-craft-icon-twitch text-2xl"></i>
       </a>
     </div>

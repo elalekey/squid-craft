@@ -1,21 +1,22 @@
 @font-face {
-  font-family: "squid-craft-icons";
-  src: url("~/assets/icons/squid-craft-icons.eot?owdj44");
-  src: url("~/assets/icons/squid-craft-icons.eot?owdj44#iefix")
-      format("embedded-opentype"),
-    url("~/assets/icons/squid-craft-icons.ttf?owdj44") format("truetype"),
-    url("~/assets/icons/squid-craft-icons.woff?owdj44") format("woff"),
-    url("~/assets/icons/squid-craft-icons.svg?owdj44#squid-craft-icons")
-      format("svg");
+  font-family: 'squid-craft-icons';
+  src: url('~/assets/icons/squid-craft-icons.eot?pz0ekk');
+  src: url('~/assets/icons/squid-craft-icons.eot?pz0ekk#iefix')
+      format('embedded-opentype'),
+    url('~/assets/icons/squid-craft-icons.ttf?pz0ekk')
+      format('truetype'),
+    url('~/assets/icons/squid-craft-icons.woff?pz0ekk') format('woff'),
+    url('~/assets/icons/squid-craft-icons.svg?pz0ekk#squid-craft-icons')
+      format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="squid-craft-icon-"],
-[class*=" squid-craft-icon-"] {
+[class^='squid-craft-icon-'],
+[class*=' squid-craft-icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "squid-craft-icons" !important;
+  font-family: 'squid-craft-icons' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -28,24 +29,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.squid-craft-icon-twitch:before {
+  content: '\e90c';
+}
+.squid-craft-icon-calendar:before {
+  content: '\e907';
+}
+.squid-craft-icon-money-up:before {
+  content: '\e908';
+}
+.squid-craft-icon-skull:before {
+  content: '\e909';
+}
+.squid-craft-icon-timer:before {
+  content: '\e90a';
+}
+.squid-craft-icon-times:before {
+  content: '\e90b';
+}
 .squid-craft-icon-home:before {
-  content: "\e900";
+  content: '\e900';
 }
 .squid-craft-icon-list:before {
-  content: "\e901";
+  content: '\e901';
 }
 .squid-craft-icon-streamers:before {
-  content: "\e902";
+  content: '\e902';
 }
 .squid-craft-icon-news:before {
-  content: "\e903";
+  content: '\e903';
 }
 .squid-craft-icon-instagram:before {
-  content: "\e904";
+  content: '\e904';
 }
 .squid-craft-icon-twitter:before {
-  content: "\e905";
+  content: '\e905';
 }
 .squid-craft-icon-youtube:before {
-  content: "\e906";
+  content: '\e906';
 }

@@ -1,2 +1,8 @@
-@import "./icons.scss";
-@import "./helpers.scss";
+@import './icons.scss';
+@import './helpers.scss';
+
+@font-face {
+  font-family: 'squid-font';
+  src: local('squid-font'),
+    url('~/assets/fonts/squid-font.ttf') format('truetype');
+}

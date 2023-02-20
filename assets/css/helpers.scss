@@ -6,6 +6,15 @@
   .icon {
     @apply text-pink-500 rounded-full pr-2 text-2xl;
   }
+
+  .main-content {
+    @apply relative container mx-auto max-sm:px-4 md:px-0 py-8 grid md:grid-cols-6 md:items-baseline xl:max-w-7xl md:max-w-4xl;
+  }
+
+  .icon-event {
+    @apply text-pink-500 rounded-full pr-2 text-lg;
+  }
+
   .icon-hover {
     @apply text-pink-500 rounded-full p-2 hover:bg-pink-500/25 cursor-pointer text-2xl;
   }
@@ -15,27 +24,104 @@
   }
 
   .header {
-    @apply sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] shadow-md;
+    @apply sticky top-0 z-50 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06] shadow-md;
   }
 
   .footer {
-    @apply absolute w-full bottom-0 z-40;
+    @apply w-full;
+  }
+
+  .squid-font {
+    @apply text-2xl max-sm:text-xs max-sm:text-lg;
+    font-family: 'squid-font';
+  }
+
+  .card {
+    @apply rounded-lg mt-4;
+    background-color: rgb(21, 32, 43);
+    width: 300px;
+    position: relative;
+    z-index: 1;
+    .channel {
+      opacity: 0;
+      z-index: -1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      z-index: 10;
+      text-align: center;
+      width: 100%;
+      height: 40px;
+      transition: opacity 0.5s;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 125px;
+        height: 40px;
+        padding: 8px;
+        @apply px-2 py-2 bg-purple-500 rounded-full;
+      }
+    }
+    &::before {
+      content: '';
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-top-right-radius: 0.5rem;
+      border-top-left-radius: 0.5rem;
+      background-color: transparent;
+      transition: background-color 0.5s;
+      z-index: 0;
+    }
+    &:hover {
+      .channel {
+        opacity: 1;
+      }
+      &::before {
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-top-right-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        background-color: rgba(#000, 0.5);
+        z-index: 1;
+      }
+    }
   }
 
   body {
     background-color: #1e293b;
     @apply text-white;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
     &:before {
       position: absolute;
       content: '';
       width: 100%;
       opacity: 0.015;
-      height: 100vh;
+      height: 100%;
       background-image: url('~/assets/squid-craft-pattern.svg');
+      overflow: auto;
+      resize: both;
+      background-repeat: round;
       z-index: -1;
     }
+  }
+
+  .twitter-tweet {
+    max-width: 300px !important;
   }
 
   html {
